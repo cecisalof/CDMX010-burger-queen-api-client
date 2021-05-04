@@ -1,13 +1,32 @@
-import React from "react";
-
+import React, { useEffect} from "react";
 import{
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 
+import {UserForm} from "./components/UserForm";
+
+
 function App() {
+
+  // let [products, setProduct] = useState()
+
+  let getData = async () => {
+    let url = `http://localhost:4000/` // aquí conectaríamos el endpoint de Brenda, url en desarrollo
+    
+    //variable asíncrona que traerá la data
+    let getFetchData = await fetch(url) //fetch consultará la URL
+    .then(result => result.json())
+    
+    console.log(getFetchData);
+  }
+  
+// ciclo de vida del componente
+  useEffect (() => { 
+    getData() // espicificamos qué data queremos traer
+  }, [])
+
   return (
     <Router>
       <Switch>
@@ -16,6 +35,7 @@ function App() {
         </Route>
         <Route path="/login">
         soy la página de Log In
+        <UserForm />
         </Route>
         <Route path="/mainpage">
           soy la Main Page
@@ -26,7 +46,7 @@ function App() {
     </div>
     </Router>
   );
-
+ 
 }
 
 export default App;
