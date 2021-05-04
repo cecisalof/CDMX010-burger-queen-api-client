@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import { ButtonForm } from './Buttons';
 
 export class UserForm extends React.Component {
     constructor(props) {
@@ -30,8 +31,11 @@ export class UserForm extends React.Component {
           type='text'
           // onChange={this.myChangeHandler}
         />
+        <ButtonForm />
         </form>
+        
       );
+      
     }
   }
   
