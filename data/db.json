@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Café americano",
+      "price": 	5,
+      "image": 	"https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32244-emre-gencer-364602-unsplash-1.jpg",
+      "type": "Desayuno"
+    },
+    {
+      "id": 2,
+      "name": "Café con leche",
+      "price": 	7,
+      "image": 	"https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32244-emre-gencer-364602-unsplash-1.jpg",
+      "type": "Desayuno"
+    },
+    {
+      "id": 3,
+      "name": "Sandwich de jamón y queso",
+      "price": 	10,
+      "image": 	"https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32244-emre-gencer-364602-unsplash-1.jpg",
+      "type": "Desayuno"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import React from 'react'
+import Contador from './Components/Contador'
 import './App.css';
+
 
 import{
   BrowserRouter as Router,
@@ -21,6 +23,7 @@ function App() {
         </Route>
         <Route path = '/order'>
           <h1>Hola soy para las ordenes</h1>
+            <Contador/>
         </Route>
         <Route path = '/kitchen'>
           <h1>Hola soy el jefe de cocina</h1>
