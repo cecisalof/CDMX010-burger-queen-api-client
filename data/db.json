@@ -1,4 +1,25 @@
 {
+  "users": [{
+    "_id": "608b8e926d12cc5030c19177",
+    "email": "admin@burgerqueen.com",
+    "password": "12345",
+    "roles": {
+      "admin": true,
+      "waiter": false,
+      "kitchen": false
+    }
+  },
+  {
+    "_id": "608b8e926d12cc5030c19178",
+    "email": "waiter01@burgerqueen.com",
+    "password": "12345",
+    "roles": {
+    "admin": false,
+    "waiter": true,
+    "kitchen": false
+    }
+  }
+  ],
   "products": [
     {
       "id": 1,
@@ -18,7 +39,7 @@
       "id": 3,
       "name": "Sandwich de jamón y queso",
       "price": 	10,
-      "image": 	"https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32244-emre-gencer-364602-unsplash-1.jpg",
+      "image": 	"https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/06/12/5e99779a397fc.jpeg",
       "type": "Desayuno"
     }
   ]
