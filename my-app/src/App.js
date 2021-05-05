@@ -13,7 +13,7 @@ function App() {
   // let [products, setProduct] = useState()
 
   let getData = async () => {
-    let url = `http://localhost:4000/` // aquí conectaríamos el endpoint de Brenda, url en desarrollo
+    let url = `http://localhost:8080/users` // aquí conectaríamos el endpoint de Brenda, url en desarrollo
     //localhost:8080/auth, aquí tendríamos que contruir la función con axios enviarte el valor de los inputs al servidor
     
     //variable asíncrona que traerá la data
