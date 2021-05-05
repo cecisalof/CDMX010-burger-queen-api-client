@@ -4,15 +4,14 @@ import './Input.css'
 // eslint-disable-next-line no-unused-vars
 const Input = ( { attribute, handleChange, param } ) => {
   return (
-    <div>
+    <div className='input-container'>
       <input
       id= {attribute.id}
       name={attribute.name}
       placeholder={attribute.placeholder}
       type={attribute.type}
       onChange={(e)=> handleChange(e.target.name, e.target.value)}
-      className='regular-style'
-
+      className= { param ? 'input-error' : 'regular-style'}
       />
     </div>
   )
