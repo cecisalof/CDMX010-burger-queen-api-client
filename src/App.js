@@ -11,7 +11,7 @@ import {
 
 function App() {
   let getData = async() => {
-    let url=`http://localhost:8080/users`
+    let url=`http://localhost:8080/`
     let getFetchData = await fetch(url).then(resul=>resul.json())
     console.log(getFetchData)
   }
