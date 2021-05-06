@@ -1,53 +1,49 @@
-import React, { useEffect} from "react";
-import{
+import React, { useEffect } from 'react';
+import Login from './Views/Login';
+import './App.css';
+
+import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
-
-import {UserForm} from "./components/UserForm";
+} from 'react-router-dom';
 
 
 function App() {
-
-  // let [products, setProduct] = useState()
-
-  let getData = async () => {
-    let url = `http://localhost:8080/users` // aquí conectaríamos el endpoint de Brenda, url en desarrollo
-    //localhost:8080/auth, aquí tendríamos que contruir la función con axios enviarte el valor de los inputs al servidor
-    
-    //variable asíncrona que traerá la data
-    let getFetchData = await fetch(url) //fetch consultará la URL
-    .then(result => result.json())
-    
-    console.log(getFetchData);
+  let getData = async() => {
+    let url=`http://localhost:8080/`
+    let getFetchData = await fetch(url)
+    .then(resul=>resul.json())
+    console.log(getFetchData)
   }
-  
-// ciclo de vida del componente
-  useEffect (() => { 
-    getData() // espicificamos qué data queremos traer
+  useEffect(() =>{
+    getData()
   }, [])
 
   return (
-    <Router>
+  <Router>
+    <div className="App">
       <Switch>
-        <Route path="/" exact>
-          Hola! soy la página de inicio
+        <Route path = '/' exact>
+          <h1>Hola soy el home</h1>
         </Route>
-        <Route path="/login">
-        soy la página de Log In
-        <UserForm />
+        <Route path = '/login'>
+          <Login />
         </Route>
-        <Route path="/mainpage">
-          soy la Main Page
+        <Route path = '/order'>
+          <h1>Hola soy para las ordenes</h1>
+        </Route>
+        <Route path = '/kitchen'>
+          <h1>Hola soy el jefe de cocina</h1>
+        </Route>
+        <Route path = '/admin'>
+          <h1>Hola soy el administrador</h1>
+          <p>ya tengo los datos de users</p>
         </Route>
       </Switch>
-    <div className="App">
-      
     </div>
-    </Router>
+  </Router>
   );
- 
 }
 
 export default App;
