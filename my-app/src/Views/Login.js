@@ -14,7 +14,7 @@ const Login = () => {
   // const [ isLogin, setIsLogin ] = useState(true);
 
   function handleChange(name, value) {
-    if (name == 'usuario') {
+    if (name === 'usuario') {
       setUser(value)
     } else {
       if(value.length < 6) {
@@ -48,7 +48,7 @@ const Login = () => {
     console.log('Tomando token desde local storage:', user);
 
     if (user)
-    axios.post('http://localhost:8080/users',{
+    axios.get('http://localhost:8080/users',{
       header: user
     }).then(response =>{
       console.log(response);
