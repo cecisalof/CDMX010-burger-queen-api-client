@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Login from './Views/Login';
 import Order from './Views/Order';
 import './App.css';
+import ProductCards from './Views/Orders';
 
 import {
   BrowserRouter as Router,
@@ -12,7 +13,7 @@ import {
 
 function App() {
   let getData = async() => {
-    let url=`http://localhost:8080/`
+    let url=`http://localhost:8080/products`
     let getFetchData = await fetch(url).then(resul=>resul.json())
     console.log(getFetchData)
   }
