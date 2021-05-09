@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Login from './Views/Login';
 import './App.css';
+import ProductCards from './Views/Orders';
 
 import {
   BrowserRouter as Router,
@@ -11,7 +12,7 @@ import {
 
 function App() {
   let getData = async() => {
-    let url=`http://localhost:8080/`
+    let url=`http://localhost:8080/products`
     let getFetchData = await fetch(url).then(resul=>resul.json())
     console.log(getFetchData)
   }
@@ -24,6 +25,12 @@ function App() {
       <Switch>
         <Route path = '/' exact>
           <h1>Hola soy el home</h1>
+          <div>
+              <ProductCards/>
+              <ProductCards/>
+              <ProductCards/>
+              <ProductCards/>
+          </div>
         </Route>
         <Route path = '/login'>
           <Login />

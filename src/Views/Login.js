@@ -36,26 +36,26 @@ const Login = () => {
       email: user,
       password: password
     }).then((response) => {
-      console.log(response);
+      console.log("respuesta a promesa",response);
       localStorage.setItem('user', JSON.stringify(response.data));
       console.log(response.data);
       return response.data;
     })
+    authHeader()
     }
 
-  function authHeader() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    console.log('Tomando token desde local storage:', user);
+    function authHeader() {
+      const user = JSON.parse(localStorage.getItem('user'));
+      console.log(user);
+      console.log('Tomando token desde local storage:', user);
 
-    if (user)
-    axios.post('http://localhost:8080/users',{
-      header: user
-    }).then(response =>{
-      console.log(response);
-        return response;
-    })
-  }
-
+      if (user)
+      axios.get('http://localhost:8080/users/', { headers: { Authorization: `Baerer ${user.token}`}})
+      .then(response =>{
+        console.log(response);
+          return response;
+      })
+    }
 
 
   function handleSubmit(){
@@ -64,8 +64,6 @@ const Login = () => {
     if (account){
       ifMatch(account)
     }
-    authHeader()
-
   }
 
   return (
