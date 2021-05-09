@@ -48,20 +48,17 @@ const Login = () => {
     if (userToken)
     axios.get('http://localhost:8080/users/', { headers: { Authorization: `Bearer ${userToken.token}`}})
     .then(response =>{
-      console.log('todos los usuarios' , response)
-      return response;
-    }).then (response=>{
-      console.log(response)
-      // if (response.length >0){
-      //   // variables de sesión
-      //   let sesion = response[''];
-      //   localStorage.setItem('id',sesion._id, {path:'/'});
-      //   localStorage.setItem('email',sesion.email, {path:'/'});
-      //   alert ('estas logueado')
-      //   window.location.href='./order';
-      // } else {
-      //   alert (' el usuario o o contraseña son incorrectos')
-      // }
+      console.log('esta es la respuesta a get users' , response)
+      console.log('esta es la respuesta con todos los usuarios' , response.data)
+      return response.data;
+    }).then(response=> {
+      console.log('estos son los usuarios' , response)
+      if (response.status = 200){
+        alert ('estas logueado')
+        window.location.href='./order';
+      } else {
+        alert (' el usuario o o contraseña son incorrectos')
+      }
     }).catch (error =>{
       console.log(error)
     })
