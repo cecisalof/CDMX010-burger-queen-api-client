@@ -10,7 +10,6 @@ const initialInputs = {
   password:''
 }
 
-
 const Login = () => {
   // --  infromación de usuario y contraseña
   const [ inputData, setInputData ] = useState(initialInputs);
@@ -55,7 +54,7 @@ const Login = () => {
       console.log('estos son los usuarios' , response)
       if (response.status = 200){
         alert ('estas logueado')
-        window.location.href='./order';
+        window.location.href='./orders';
       } else {
         alert (' el usuario o o contraseña son incorrectos')
       }
