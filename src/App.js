@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Login from './Views/Login';
-import Order from './Views/Order';
+import Orders from './Views/Orders';
 import './App.css';
 import ProductCards from './Views/Orders';
 
@@ -27,9 +27,8 @@ function App() {
         <Route path = '/' exact>
         <Login />
         </Route>
-        <Route path = '/order'>
-        <Order />
-          <h1>Hola soy para las ordenes</h1>
+        <Route path = '/orders'>
+        <Orders />
         </Route>
         <Route path = '/kitchen'>
           <h1>Hola soy el jefe de cocina</h1>
