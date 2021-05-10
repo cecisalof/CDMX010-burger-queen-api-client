@@ -1,0 +1,26 @@
+#product-content {
+  display: flex;
+  flex-direction: row; /* text-align: center; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  margin: 35px;
+  padding: 10px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+  width: 30%;
+}
+#product-photos {
+  width: 50%;
+  align-self: center;
+}
+#name {
+  display: flex;
+  font-size: 20;
+  line-height: 1.5;
+  text-align: center;
+}
+#price {
+  display: flex; /* line-height: 1.5; */ /* position: absolute; */
+}
+.disabled {
+  opacity: 0.3;
+}

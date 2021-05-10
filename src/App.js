@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Login from './Views/Login';
+import Orders from './Views/Orders';
 import './App.css';
 import ProductCards from './Views/Orders';
 
@@ -24,25 +25,10 @@ function App() {
     <div className="App">
       <Switch>
         <Route path = '/' exact>
-          <h1>Hola soy el home</h1>
-          <div>
-              <ProductCards/>
-              <ProductCards/>
-              <ProductCards/>
-              <ProductCards/>
-          </div>
+        <Login />
         </Route>
-        <Route path = '/login'>
-          <Login />
-        </Route>
-        <Route path = '/order'>
-          <h1>Hola soy para las ordenes</h1>
-          <div>
-              <ProductCards/>
-              <ProductCards/>
-              <ProductCards/>
-              <ProductCards/>
-          </div>
+        <Route path = '/orders'>
+        <Orders />
         </Route>
         <Route path = '/kitchen'>
           <h1>Hola soy el jefe de cocina</h1>

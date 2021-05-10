@@ -49,3 +49,24 @@ p {
 .disabled{
     opacity: 0.5;
 }
+.order-container{
+  display: flex;
+  background-color: #ffcd38 ;
+}
+
+
+.menu-container{
+  display: flex;
+  flex-flow:column;
+  justify-content:space-evenly;
+  width: 60%;
+  background-color:#ffcd38;
+}
+
+
+.cart-container{
+  flex-direction: column;
+  width: 40%;
+  background-color:#ffff;
+
+}
