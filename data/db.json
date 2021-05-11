@@ -1,46 +1,128 @@
 {
-  "users": [{
-    "_id": "608b8e926d12cc5030c19177",
-    "email": "admin@burgerqueen.com",
-    "password": "12345",
-    "roles": {
-      "admin": true,
-      "waiter": false,
-      "kitchen": false
+    "products": [{
+      "data": {
+        "next": {
+          "page": 2,
+          "limit": 10
+        },
+        "result": [
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "60978564eade738850d0c3a4",
+            "name": "Café con leche",
+            "price": 45,
+            "image": "https://cdn.kiwilimon.com/recetaimagen/15262/th5-640x426-7456.jpg",
+            "type": "desayuno",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "609785bdeade738850d0c3a5",
+            "name": "Café americano",
+            "price": 35,
+            "image": "https://images.rappi.com.mx/products/75408e64-c5c3-4aaf-86f5-dfb56dc122d5-1597085024168.jpeg?d=200x200&e=webp",
+            "type": "desayuno",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "6097863aeade738850d0c3a7",
+            "name": "Sandwich de jamón y queso",
+            "price": 70,
+            "image": "https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/06/12/5e99779a397fc.jpeg",
+            "type": "desayuno",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "60978692eade738850d0c3a8",
+            "name": "Jugo de frutas natural",
+            "price": 45,
+            "image": "https://cdn-3.expansion.mx/dims4/default/d49f1dc/2147483647/strip/true/crop/732x384+0+43/resize/1200x630!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg",
+            "type": "desayuno",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "60978757eade738850d0c3a9",
+            "name": "hamburguesa simple",
+            "price": 80,
+            "image": "https://images.rappi.com.mx/products/6dc8f3ce-c25a-4e67-b0a4-61e551788107-1609950669835.jpeg?d=128x90&e=webp",
+            "type": "comida"
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "6097877deade738850d0c3aa",
+            "name": "hamburguesa doble",
+            "price": 95,
+            "image": "https://images.rappi.com.mx/products/cce62d2a-5dc3-437b-a80e-020d8703cb3a-1610115165391.jpeg?d=128x90&e=webp",
+            "type": "comida",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "609787afeade738850d0c3ab",
+            "name": "Papas fritas",
+            "price": 50,
+            "image": "https://images.rappi.com.mx/products/d4e7a3d1-911b-410a-95cc-8e488b1adb59-1599502116941.jpeg?d=128x90&e=webp",
+            "type": "comida",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "609787d6eade738850d0c3ac",
+            "name": "Aros de cebolla",
+            "price": 60,
+            "image": "https://images.rappi.com.mx/products/d5276eca-3d9a-4d59-87df-e7b10de13b44-1599502386008.jpeg?d=128x90&e=webp",
+            "type": "comida",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "60978962eade738850d0c3ad",
+            "name": "Agua 500 ml",
+            "price": 15,
+            "image": "",
+            "type": "comida",
+            "__v": 0
+          },
+          {
+            "dateEntry": "2021-05-09T06:38:45.661Z",
+            "_id": "60978979eade738850d0c3ae",
+            "name": "Agua 750 ml",
+            "price": 20,
+            "image": "",
+            "type": "comida",
+            "__v": 0
+          }
+        ]
+      },
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "content-length": "2424",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "config": {
+        "url": "http://localhost:8080/products/",
+        "method": "get",
+        "headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MDkwZWRhMGFmMWE1ODNiMDBmNzQ3NDUiLCJpYXQiOjE2MjA2Nzg0ODEsImV4cCI6MTYyMDc2NDg4MX0.t34ochQsC3YIBw6pNpEvVEnlBaXa_mVTvHzbvnlUDTE"
+        },
+        "transformRequest": [
+          null
+        ],
+        "transformResponse": [
+          null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1
+      },
+      "request": {}
     }
-  },
-  {
-    "_id": "608b8e926d12cc5030c19178",
-    "email": "waiter01@burgerqueen.com",
-    "password": "12345",
-    "roles": {
-    "admin": false,
-    "waiter": true,
-    "kitchen": false
-    }
+    ]
   }
-  ],
-  "products": [
-    {
-      "id": 1,
-      "name": "Café americano",
-      "price": 	5,
-      "image": 	"https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32244-emre-gencer-364602-unsplash-1.jpg",
-      "type": "Desayuno"
-    },
-    {
-      "id": 2,
-      "name": "Café con leche",
-      "price": 	7,
-      "image": 	"https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32244-emre-gencer-364602-unsplash-1.jpg",
-      "type": "Desayuno"
-    },
-    {
-      "id": 3,
-      "name": "Sandwich de jamón y queso",
-      "price": 	10,
-      "image": 	"https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/06/12/5e99779a397fc.jpeg",
-      "type": "Desayuno"
-    }
-  ]
-}
