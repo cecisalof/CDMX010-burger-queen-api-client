@@ -13,7 +13,7 @@ import {
 
 function App() {
   let getData = async() => {
-    let url=`http://localhost:8080/`
+    let url=`http://localhost:8000/`
     let getFetchData = await fetch(url).then(resul=>resul.json())
     console.log(getFetchData)
   }
@@ -32,6 +32,7 @@ function App() {
         </Route>
         <Route path = '/kitchen'>
           <h1>Hola soy el jefe de cocina</h1>
+        <Orders />
         </Route>
         <Route path = '/admin'>
           <h1>Hola soy el administrador</h1>

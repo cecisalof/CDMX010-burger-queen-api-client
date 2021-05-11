@@ -4,24 +4,24 @@ import './Orders.css'
 import axios from 'axios';
 
 
-const userToken = JSON.parse(localStorage.getItem('access'));
+// const userToken = JSON.parse(localStorage.getItem('access'));
 
 const Orders = (props) => {
-  const [products, setProducts]=useState()
+  const [products, setProducts]= useState()
 
   // -- petición a la api al endpoint Products
-  const getDataProducts = () => {
-    return axios.get('http://localhost:8080/products/', {
-      headers: { Authorization: `Bearer ${userToken.token}` },
-    }).then((response) => {
+  const getDataProducts = async () => {
+     try {
+      const response = await axios.get('http://localhost:8000/products/'
+      );
       const itemsData = response.data;
-      console.log('itemsData', itemsData)
-      if (itemsData){
-        setProducts(itemsData)
+      console.log('itemsData', itemsData);
+      if (itemsData) {
+        setProducts(itemsData);
       }
-    }).catch((error) => {
+    } catch (error) {
       console.log(error);
-    })
+    }
   };
 
   // --ciclo de vida del componente ?
@@ -37,9 +37,10 @@ const Orders = (props) => {
     return (
       <div className='order-container'>
         <div className='menu-container'>
+        <ProductCard />
         {/* con este operador validamos que el state no esté vacio  */}
-        {products&& products.result.map(product =>
-          <ProductCard product={product} key={product._id} />
+        {products&& products.map(item =>
+          <ProductCard item={item} key={item.id} />
         )}
         </div>
         <div className='cart-container'>

@@ -1,4 +1,25 @@
 {
+  "users": [{
+    "_id": "608b8e926d12cc5030c19177",
+    "email": "admin@burgerqueen.com",
+    "password": "passwordAdmin67#22",
+    "roles": {
+      "admin": true,
+      "waiter": false,
+      "kitchen": false
+    }
+  },
+  {
+    "_id": "608b8e926d12cc5030c19178",
+    "email": "waiter01@burgerqueen.com",
+    "password": "12345",
+    "roles": {
+    "admin": false,
+    "waiter": true,
+    "kitchen": false
+    }
+  }
+  ],
     "products": [{
       "data": {
         "next": {

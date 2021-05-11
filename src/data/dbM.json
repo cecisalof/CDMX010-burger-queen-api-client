@@ -2,7 +2,7 @@
   "users": [{
     "_id": "608b8e926d12cc5030c19177",
     "email": "admin@burgerqueen.com",
-    "password": "12345",
+    "password": "passwordAdmin67#22",
     "roles": {
       "admin": true,
       "waiter": false,
