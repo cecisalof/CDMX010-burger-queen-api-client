@@ -32,27 +32,29 @@ const Orders = (props) => {
   },[])
 
   return (
-    <div className='order-container'>
-      <div className='menu-container'>
-      {/* con este operador validamos que el state no esté vacio  */}
-        {products&& products.result.map(product =>
-          <ProductCard
-          key={product._id}
-          product={product}
-          products= {products}
-          setProducts={setProducts}
+    <>
+      <div className='order-container'>
+        <div className='menu-container'>
+        {/* con este operador validamos que el state no esté vacio  */}
+          {products&& products.result.map(product =>
+            <ProductCard
+            key={product._id}
+            product={product}
+            products= {products}
+            setProducts={setProducts}
+            cart={cart}
+            setCart={setCart}
+            />
+          )}
+        </div>
+        <div className='cart-container'>
+        {/* pasar al estado al componente Cart*/}
+          <Cart
           cart={cart}
-          setCart={setCart}
-          />
-        )}
+          setCart={setCart}/>
+        </div>
       </div>
-      <div className='cart-container'>
-      {/* pasar al estado al componente Cart*/}
-        <Cart
-        cart={cart}
-        setCart={setCart}/>
-      </div>
-    </div>
+    </>
   );
 }
 export default Orders;
