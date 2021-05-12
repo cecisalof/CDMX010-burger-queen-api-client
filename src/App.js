@@ -11,14 +11,14 @@ import {
 
 
 function App() {
-  let getData = async() => {
-    let url=`http://localhost:8080/`
-    let getFetchData = await fetch(url).then(resul=>resul.json())
-    console.log(getFetchData)
-  }
-  useEffect(() =>{
-    getData()
-  }, [])
+  // let getData = async() => {
+  //   let url=`http://localhost:8080/`
+  //   let getFetchData = await fetch(url).then(resul=>resul.json())
+  //   console.log(getFetchData)
+  // }
+  // useEffect(() =>{
+  //   getData()
+  // }, [])
   return (
   <Router>
     <div className="App">

@@ -28,7 +28,7 @@ const Login = () => {
       email: inputData.email,
       password: inputData.password
     }).then(response => {
-      console.log('axios post response:', response)
+      console.log('axios post auth response:', response)
       if (response.data.status = 200){
         console.log('axios token access:', response.data)
         localStorage.setItem('access', JSON.stringify(response.data))
@@ -47,7 +47,7 @@ const Login = () => {
     if (userToken)
     axios.get('http://localhost:8080/users/', { headers: { Authorization: `Bearer ${userToken.token}`}})
     .then(response =>{
-      console.log('esta es la respuesta a get users' , response)
+      console.log('axios get users response' , response)
       console.log('esta es la respuesta con todos los usuarios' , response.data)
       return response.data;
     }).then(response=> {
