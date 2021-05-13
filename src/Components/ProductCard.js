@@ -10,6 +10,7 @@ const ProductCard = ({ product, products, cart, setCart }) => {
   // // -- Función para aumentar cantidad de Items en el carrito
   const addProduct = (id) =>{
     const matchIdAdd = cart.find((product)=> product._id === id);
+    console.log(matchIdAdd)
     if(matchIdAdd){
       setCart(cart.map((item)=> item._id === product._id ? {...matchIdAdd, qty: matchIdAdd.qty + 1 } : item))
     } else {
